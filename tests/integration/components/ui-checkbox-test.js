@@ -19,9 +19,3 @@ test('Responds to change events', function(assert) {
   assert.equal(this.$('input')[0].checked, true);
 
 });
-
-test('does not render label if checkbox is fitted', function (assert){
-  this.render(hbs`{{ui-checkbox isFitted=true}}`);
-  var label = this.$('label').length;
-  assert.equal(label, 0);
-});

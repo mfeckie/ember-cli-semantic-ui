@@ -2,6 +2,36 @@
 <p {{action 'check'}}>
   isChecked is {{isChecked}}
 </p>
-{{ui-checkbox isChecked=isChecked label="Default"}}
-{{ui-checkbox isChecked=isChecked label="Toggle" class='toggle'}}
-{{ui-checkbox isChecked=isChecked label="Slider" class='slider'}}
+
+<div class="ui segment raised">
+  <p>
+    Set label="name" to have a label name displayed
+  </p>
+  <p>
+    Pass in a variable as `isChecked` to bind a value
+  </p>
+  <p>
+  Use the available Semantic UI classes to change the appearance, the following are available <pre>toggle slider fitted</pre>  
+  </p>
+
+</div>
+
+<div class="ui segment">
+  <pre>\{{ui-checkbox isChecked=isChecked label="Default"}}</pre>
+  {{ui-checkbox isChecked=isChecked label="Default"}}
+</div>
+
+<div class="ui segment">
+  <pre>\{{ui-checkbox isChecked=isChecked label="Toggle" class='toggle'}}</pre>
+  {{ui-checkbox isChecked=isChecked label="Toggle" class='toggle'}}
+</div>
+
+<div class="ui segment">
+  <pre>\{{ui-checkbox isChecked=isChecked label="Slider" class='slider'}}</pre>
+  {{ui-checkbox isChecked=isChecked label="Slider" class='slider'}}
+</div>
+
+<div class="ui segment">
+  <pre>\{{ui-checkbox isChecked=isChecked class='fitted'}}</pre>
+  {{ui-checkbox isChecked=isChecked class='fitted'}}
+</div>
