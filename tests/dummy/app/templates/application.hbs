@@ -1,7 +1,12 @@
 <div class="ui page grid">
   <div class="eleven wide column">
     <h2 id="title">Welcome to Ember</h2>
-    {{#link-to 'checkbox'}}Checkbox{{/link-to}}
+    <div class="ui menu">
+      {{#link-to 'checkbox' class='item'}}Checkbox{{/link-to}}
+      {{#link-to 'radio' class='item'}}Radio{{/link-to}}
+    </div>
+
+
 
     {{outlet}}
   </div>
