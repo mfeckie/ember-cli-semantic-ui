@@ -1,16 +1,25 @@
 <h1>Radio</h1>
-<p>
-  Selected item is: {{selectedItem}}
-</p>
 <div class="ui segment raised">
   <p>
-    Given a plain Array will use each index as both label and value
+    Given an Array of strings will use each item as both label and value
+  </p>
+  <p>
+    Given an Array of objects you need to pass in the name of the label and value on the objects
   </p>
 </div>
 
 <div class="ui segment">
+  Selected item is: {{checked}}
   <pre>
-    \{{ui-radio-collection optionCollection=optionCollection}}
+    \{{ui-radio-collection optionCollection=optionCollection checked=checked}}
   </pre>
   {{ui-radio-collection optionCollection=optionCollection checked=checked}}
+</div>
+
+<div class="ui segment">
+  Selected item is: {{checked}}
+  <pre>
+    \{{ui-radio-collection optionCollection=namedCollection checked=checked value='rgb' label='color'}}
+  </pre>
+  {{ui-radio-collection optionCollection=namedCollection checked=checked value='rgb' label='color'}}
 </div>

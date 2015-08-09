@@ -5,5 +5,10 @@ export default Ember.Controller.extend({
     'green',
     'blue'
   ],
-  checked: 'red'
+  checked: 'red',
+  namedCollection: [
+    {color: 'red', rgb: '#FF0000'},
+    {color: 'green', rgb: '#00FF00'},
+    {color: 'blue', rgb: '#0000FF'}
+  ]
 });
