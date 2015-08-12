@@ -5,17 +5,6 @@ moduleForComponent('ui-radio-collection', 'Integration | Component | ui radio co
   integration: true
 });
 
-var optionCollection = ['red', 'green', 'blue'];
-
-test('it renders plain options', function(assert) {
-  this.set('optionCollection', optionCollection);
-
-  this.render(hbs`{{ui-radio-collection optionCollection=optionCollection}}`);
-
-  assert.equal(this.$('label').first().text().trim(), 'red');
-
-});
-
 test('renders named pairs', function (assert){
   var namedPair = [
     {color: 'white', rgb: '#FFF'}
