@@ -1,0 +1,51 @@
+<h1>Accordion</h1>
+
+<div class="ui segment raised">
+</div>
+
+<div class="ui segment">
+  <pre>
+    \{{#ui-accordion}}
+      \{{#ui-accordion-section title='My Unstyled Accordion' active=true}}
+          &lt;p&gt;This is the content of the accordion&lt;/p&gt;
+      \{{/ui-accordion-section}}
+      \{{#ui-accordion-section title='My Second Section'}}
+          &lt;p&gt;This is the content of the second section&lt;/p&gt;
+      \{{/ui-accordion-section}}
+    \{{/ui-accordion}}
+  </pre>
+  {{#ui-accordion}}
+    {{#ui-accordion-section title='My Unstyled Accordion' active=true}}
+      <p>This is the content of the accordion</p>
+    {{/ui-accordion-section}}
+    {{#ui-accordion-section title='My Second Section'}}
+      <p>This is the content of the second section</p>
+    {{/ui-accordion-section}}
+  {{/ui-accordion}}
+
+</div>
+
+<div class="ui segment">
+  <pre>
+    \{{#ui-accordion class='styled'}}
+      \{{#ui-accordion-section title='My Styled Accordion' active=true}}
+        &lt;p&gt;This is the content of the accordion&lt;/p&gt;
+      \{{/ui-accordion-section}}
+      \{{#ui-accordion-section title='My Second Section'}}
+        &lt;p&gt;This is the content of the second section&lt;/p&gt;
+      \{{/ui-accordion-section}}
+    \{{/ui-accordion}}
+  </pre>
+  {{#ui-accordion class='styled'}}
+    {{#ui-accordion-section title='My Styled Accordion' active=true}}
+      <p>This is the content of the accordion</p>
+    {{/ui-accordion-section}}
+    {{#ui-accordion-section title='My Second Section'}}
+      <p>This is the content of the second section</p>
+    {{/ui-accordion-section}}
+    {{#ui-accordion-section title='My Third Section'}}
+      <p>This is the content of the third section</p>
+    {{/ui-accordion-section}}
+  {{/ui-accordion}}
+</div>
+

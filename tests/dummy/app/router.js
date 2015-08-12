@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('checkbox');
   this.route('radio');
+  this.route('accordion');
 });
 
 export default Router;

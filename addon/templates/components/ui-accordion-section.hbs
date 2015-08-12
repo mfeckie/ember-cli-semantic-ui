@@ -1,0 +1,7 @@
+<div class="title {{if active 'active'}}" {{action 'accordionToggle'}}>
+  <i class="dropdown icon"></i>
+  {{title}}
+</div>
+<div class="content {{if active 'active'}}">
+  {{yield}}
+</div>
