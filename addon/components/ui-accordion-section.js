@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   targetObject: Ember.computed.alias('parentView'),
   actions: {
     accordionToggle () {
-      this.$('.title, .content').toggleClass('active');
+      this.sendAction('action',this.$('.title, .content'));
     }
   }
 });

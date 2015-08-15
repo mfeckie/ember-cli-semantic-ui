@@ -32,6 +32,5 @@ test('Displays contents on click', function(assert) {
   assert.equal(this.$('.content').attr('class').trim(), 'content');
 
   this.$().find('.title').click();
-  assert.equal(this.$('.title').attr('class'), 'title  active');
+  assert.equal(this.$('.title').attr('class'), 'title active');
 });
-

@@ -1,6 +1,15 @@
 <h1>Accordion</h1>
 
 <div class="ui segment raised">
+  <p>
+    Use an enclosing ui-accordion and wrap each section in a ui-accordion-section.
+  </p>
+  <p>
+    Pass in the <code>styled</code> class to make the accordion styled
+  </p>
+  <p>
+    You can add titles to your accordion sections and set which one is initially active.
+  </p>
 </div>
 
 <div class="ui segment">
@@ -27,7 +36,7 @@
 
 <div class="ui segment">
   <pre>
-    \{{#ui-accordion class='styled'}}
+    \{{#ui-accordion <span class="ui label olive">class='styled'</span>}}
       \{{#ui-accordion-section title='My Styled Accordion' active=true}}
         &lt;p&gt;This is the content of the accordion&lt;/p&gt;
       \{{/ui-accordion-section}}
@@ -48,4 +57,3 @@
     {{/ui-accordion-section}}
   {{/ui-accordion}}
 </div>
-
