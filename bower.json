@@ -14,5 +14,8 @@
   },
   "devDependencies": {
     "semantic-ui": "~2.0.7"
+  },
+  "resolutions": {
+    "ember": "2.0.0"
   }
 }
