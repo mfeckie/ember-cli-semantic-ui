@@ -1,3 +1,15 @@
 {{#each options as |option|}}
-  {{ui-radio-button checked=checked value=option.value label=option.label collectionName=collectionName checkOption='checkOption' }}
+  {{#if group}}
+  <div class="field">
+    <div class="ui radio checkbox">
+      {{ui-radio-button checked=checked value=option.value collectionName=collectionName checkOption='checkOption' }}
+      <label>{{option.label}}</label>
+    </div>
+  </div>
+  {{else}}
+    <div class="ui radio checkbox">
+      {{ui-radio-button checked=checked value=option.value collectionName=collectionName checkOption='checkOption' }}
+      <label>{{option.label}}</label>
+    </div>
+  {{/if}}
 {{/each}}

@@ -8,12 +8,11 @@ moduleForComponent('ui-radio-button', 'Integration | Component | ui radio button
 test('Binds values and checked status', function(assert) {
   this.set('value', 'red');
   this.set('checked', 'blue');
-  this.set('label', 'Red');
   this.set('collectionName', 'testCollection');
 
-  this.render(hbs`{{ui-radio-button value=value label=label checked=checked collectionName=collectionName}}`);
+  this.render(hbs`{{ui-radio-button value=value checked=checked collectionName=collectionName}}`);
 
-  assert.equal(this.$('label').text().trim(), 'Red');
+  assert.equal(this.$('input').val().trim(), 'red');
 
   assert.equal(this.$('input')[0].checked, false);
 
@@ -34,9 +33,7 @@ test('Triggers actions passed in', function (assert){
     collectionName=collectionName
     checkOption='checkOption'
   }}`);
-
-  this.on('checkOption', (optionValue) => {
-    assert.equal(optionValue, 'red');
-  });
+  assert.ok(!this.$('input')[0].checked);
   this.$('input').click();
+  assert.ok(this.$('input')[0].checked);
 });

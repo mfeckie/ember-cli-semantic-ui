@@ -5,5 +5,5 @@ export default Ember.Controller.extend({
     {color: 'green', rgb: '#00FF00'},
     {color: 'blue', rgb: '#0000FF'}
   ],
-  checkedNamed: '#FF0000'
+  checked: '#FF0000'
 });

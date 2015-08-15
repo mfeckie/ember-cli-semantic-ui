@@ -7,7 +7,8 @@ moduleForComponent('ui-radio-collection', 'Integration | Component | ui radio co
 
 test('renders named pairs', function (assert){
   var namedPair = [
-    {color: 'white', rgb: '#FFF'}
+    {color: 'white', rgb: '#FFF'},
+    {color: 'blue', rgb: '#000'}
   ];
 
   this.set('optionCollection', namedPair);
@@ -21,4 +22,8 @@ test('renders named pairs', function (assert){
   }}`);
   assert.equal(this.$('label').first().text().trim(), 'white');
   assert.equal(this.$('input').first().val(), '#FFF');
+
+  this.$('input:last').click();
+
+  assert.equal(this.$('input:last')[0].checked, true);
 });

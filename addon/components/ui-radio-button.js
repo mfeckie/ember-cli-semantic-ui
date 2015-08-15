@@ -1,14 +1,15 @@
 import Ember from 'ember';
-import layout from '../templates/components/ui-radio-button';
 
 export default Ember.Component.extend({
-  layout: layout,
-  isChecked: Ember.computed('value','checked', function(){
+  tagName: 'input',
+  type: 'radio',
+  attributeBindings: ['type', 'htmlChecked:checked', 'value', 'name', 'disabled'],
+
+  htmlChecked: Ember.computed('value', 'checked', function() {
     return this.get('value') === this.get('checked');
   }),
-  actions: {
-    checkOption () {
-      this.sendAction('checkOption', this.get('value'));
-    }
+
+  change: function() {
+    this.set('checked', this.get('value'));
   }
 });

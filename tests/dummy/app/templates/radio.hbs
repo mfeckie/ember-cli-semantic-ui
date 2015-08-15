@@ -6,14 +6,28 @@
 </div>
 
 <div class="ui segment">
-  Selected item value is: {{checkedNamed}}
+  Selected item value is: {{checked}}
   <pre>
     \{{ui-radio-collection
       optionCollection=namedCollection
-      checked=checkedNamed
+      checked=checked
       value='rgb'
       label='color'
     }}
   </pre>
-  {{ui-radio-collection optionCollection=namedCollection checked=checkedNamed value='rgb' label='color'}}
+  {{ui-radio-collection optionCollection=namedCollection checked=checked value='rgb' label='color'}}
+</div>
+
+<div class="ui segment">
+  Selected item value is: {{checked}}
+  <pre>
+    \{{ui-radio-collection
+      optionCollection=namedCollection
+      checked=checked
+      value='rgb'
+      label='color',
+      <span class="ui label olive">group=true</span>
+    }}
+  </pre>
+  {{ui-radio-collection optionCollection=namedCollection checked=checked value='rgb' label='color' group=true}}
 </div>
