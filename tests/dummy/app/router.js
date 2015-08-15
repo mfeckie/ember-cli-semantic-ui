@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('checkbox');
   this.route('radio');
   this.route('accordion');
+  this.route('popup');
 });
 
 export default Router;

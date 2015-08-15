@@ -1,0 +1,72 @@
+<h1>Popup</h1>
+
+<div class="ui segment raised">
+  <p>
+    Popups are wrapped in a span tag by default so they can be used inline.
+    Further customize by add your own layout in the block.
+  </p>
+</div>
+
+<div class="ui segment">
+  <pre>
+    \{{#ui-popup popupContent='This is the content'}}
+      Hover
+    \{{#ui-popup}}
+  </pre>
+  {{#ui-popup popupContent='This is the content'}}
+      Hover
+  {{/ui-popup}}
+</div>
+
+<div class="ui segment">
+  <pre>
+    \{{#ui-popup popupTarget='#mySpecialPopup'}}
+    Hover
+      &lt;div id="mySpecialPopup" class="ui special popup"&gt;
+        &lt;div class="header">This is SPECIAL&lt;/div&gt;
+        &lt;div class="ui button"&gt;
+          Whoop!
+        &lt;/div&gt;
+      &lt;/div&gt;
+    \{{#ui-popup}}
+  </pre>
+  {{#ui-popup popupTarget='#mySpecialPopup'}}
+    Hover
+    <div id="mySpecialPopup" class="ui special popup">
+      <div class="header">This is SPECIAL</div>
+      <div class="ui button">
+        Whoop!
+      </div>
+    </div>
+  {{/ui-popup}}
+</div>
+
+<div class="ui segment">
+  <pre>
+    \{{#ui-popup popupContent='Bottom Center' position='bottom center'}}
+      &lt;div class="ui button red"&gt;
+        Hover
+      &lt;/div"&gt;
+    \{{#ui-popup}}
+  </pre>
+  {{#ui-popup popupContent='Bottom Center' position='bottom center' }}
+      <div class="ui button red">
+        Hover
+      </div>
+  {{/ui-popup}}
+</div>
+
+<div class="ui segment">
+  Use transitions from <a href="http://semantic-ui.com/modules/transition.html">http://semantic-ui.com/modules/transition.html</a>
+  <pre>
+    \{{#ui-popup popupContent='Right center with transition'
+                 position='right center'
+                 <span class="ui label olive">transition='fly left'</span>
+    }}
+      Hover
+    \{{#ui-popup}}
+  </pre>
+  {{#ui-popup popupContent='Right center with transition' position='right center' transition='fly left' }}
+      Hover
+  {{/ui-popup}}
+</div>
