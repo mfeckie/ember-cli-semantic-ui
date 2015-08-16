@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('radio');
   this.route('accordion');
   this.route('popup');
+  this.route('dimmer');
 });
 
 export default Router;
