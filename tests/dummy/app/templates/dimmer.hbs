@@ -6,29 +6,42 @@
 </div>
 
 <div class="ui segment">
-  <pre>
+  <div class="ui header">
+    A simple dimmable area
+  </div>
+  <pre class="ui segment green">
     \{{#ui-dimmable}}
       Click me!
     \{{/ui-dimmable}}
   </pre>
-  {{#ui-dimmable}}
-      Click me!
-  {{/ui-dimmable}}
+  <div class="ui segment grey">
+    {{#ui-dimmable}}
+        Click me!
+    {{/ui-dimmable}}
+  </div>
 </div>
 
 <div class="ui segment">
-  <pre>
+  <div class="ui header">
+    Add segment styling
+  </div>
+  <pre class="ui segment green">
     \{{#ui-dimmable class='ui segment'}}
       Click me!
     \{{/ui-dimmable}}
   </pre>
-  {{#ui-dimmable class='ui segment'}}
-      Click me!
-  {{/ui-dimmable}}
+  <div class="ui segment grey">
+    {{#ui-dimmable class='ui segment'}}
+        Click me!
+    {{/ui-dimmable}}
+  </div>
 </div>
 
 <div class="ui segment">
-  <pre>
+  <div class="ui header">
+    Dim a specific element
+  </div>
+  <pre class="ui segment green">
     \{{#ui-dimmable targetElement='#dimMe'}}
       This should not be dimmed
       &lt;div id="dimMe" class="ui dimmable"&gt;
@@ -36,16 +49,21 @@
       &lt;/div&gt;
     \{{/ui-dimmable}}
   </pre>
-  {{#ui-dimmable targetElement='#dimMe'}}
-    This should not be dimmed
-    <div id="dimMe" class="ui dimmable">
-      This should be dimmed!
-    </div>
-  {{/ui-dimmable}}
+  <div class="ui segment grey">
+    {{#ui-dimmable targetElement='#dimMe'}}
+      This should not be dimmed
+      <div id="dimMe" class="ui dimmable">
+        This should be dimmed!
+      </div>
+    {{/ui-dimmable}}
+  </div>
 </div>
 
 <div class="ui segment">
-  <pre>
+  <div class="ui header">
+    Add content to the dimmer overlay
+  </div>
+  <pre class="ui segment green">
     \{{#ui-dimmable}}
       &lt;p&gt;
         This will be dimmed and there will be content overlayed
@@ -66,23 +84,25 @@
       &lt;/div&gt;
     \{{/ui-dimmable}}
   </pre>
-  {{#ui-dimmable class='ui segment'}}
-    <p>
-      This will be dimmed and there will be content overlayed
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    </p>
-    <div class="ui dimmer">
-      <div class="content">
-        <div class="center">
-          <h2 class="ui inverted icon header">
-            <i class="heart icon"></i>
-            Dimmed Message!
-          </h2>
+  <div class="ui segment grey">
+    {{#ui-dimmable class='ui segment'}}
+      <p>
+        This will be dimmed and there will be content overlayed
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      </p>
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <h2 class="ui inverted icon header">
+              <i class="heart icon"></i>
+              Dimmed Message!
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
-  {{/ui-dimmable}}
+    {{/ui-dimmable}}
+  </div>
 </div>

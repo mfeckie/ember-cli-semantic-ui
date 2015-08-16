@@ -13,7 +13,10 @@
 </div>
 
 <div class="ui segment">
-  <pre>
+  <div class="ui header">
+    An unstyled accordion
+  </div>
+  <pre class="ui segment green">
     \{{#ui-accordion}}
       \{{#ui-accordion-section title='My Unstyled Accordion' active=true}}
           &lt;p&gt;This is the content of the accordion&lt;/p&gt;
@@ -23,19 +26,23 @@
       \{{/ui-accordion-section}}
     \{{/ui-accordion}}
   </pre>
-  {{#ui-accordion}}
-    {{#ui-accordion-section title='My Unstyled Accordion' active=true}}
-      <p>This is the content of the accordion</p>
-    {{/ui-accordion-section}}
-    {{#ui-accordion-section title='My Second Section'}}
-      <p>This is the content of the second section</p>
-    {{/ui-accordion-section}}
-  {{/ui-accordion}}
-
+  <div class="ui segment grey">
+    {{#ui-accordion}}
+      {{#ui-accordion-section title='My Unstyled Accordion' active=true}}
+        <p>This is the content of the accordion</p>
+      {{/ui-accordion-section}}
+      {{#ui-accordion-section title='My Second Section'}}
+        <p>This is the content of the second section</p>
+      {{/ui-accordion-section}}
+    {{/ui-accordion}}
+  </div>
 </div>
 
 <div class="ui segment">
-  <pre>
+  <div class="ui header">
+    A styled accordion
+  </div>
+  <pre class="ui segment green">
     \{{#ui-accordion <span class="ui label olive">class='styled'</span>}}
       \{{#ui-accordion-section title='My Styled Accordion' active=true}}
         &lt;p&gt;This is the content of the accordion&lt;/p&gt;
@@ -45,15 +52,17 @@
       \{{/ui-accordion-section}}
     \{{/ui-accordion}}
   </pre>
-  {{#ui-accordion class='styled'}}
-    {{#ui-accordion-section title='My Styled Accordion' active=true}}
-      <p>This is the content of the accordion</p>
-    {{/ui-accordion-section}}
-    {{#ui-accordion-section title='My Second Section'}}
-      <p>This is the content of the second section</p>
-    {{/ui-accordion-section}}
-    {{#ui-accordion-section title='My Third Section'}}
-      <p>This is the content of the third section</p>
-    {{/ui-accordion-section}}
-  {{/ui-accordion}}
+  <div class="ui segment grey">
+    {{#ui-accordion class='styled'}}
+      {{#ui-accordion-section title='My Styled Accordion' active=true}}
+        <p>This is the content of the accordion</p>
+      {{/ui-accordion-section}}
+      {{#ui-accordion-section title='My Second Section'}}
+        <p>This is the content of the second section</p>
+      {{/ui-accordion-section}}
+      {{#ui-accordion-section title='My Third Section'}}
+        <p>This is the content of the third section</p>
+      {{/ui-accordion-section}}
+    {{/ui-accordion}}
+  </div>
 </div>

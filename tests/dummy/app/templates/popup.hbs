@@ -8,19 +8,27 @@
 </div>
 
 <div class="ui segment">
-  <pre>
+  <div class="ui header">
+    Use simple content
+  </div>
+  <pre class="ui segment green">
     \{{#ui-popup popupContent='This is the content'}}
       Hover
     \{{/ui-popup}}
   </pre>
+  <div class="ui segment grey">
   {{#ui-popup popupContent='This is the content'}}
       Hover
   {{/ui-popup}}
+  </div>
 </div>
 
 <div class="ui segment">
-  <pre>
-    \{{#ui-popup popupTarget='#mySpecialPopup'}}
+  <div class="ui header">
+    Use a specific element as the content of the popup
+  </div>
+  <pre class="ui segment green">
+    \{{#ui-popup <span class="ui label olive">popupTarget='#mySpecialPopup'</span>}}
     Hover
       &lt;div id="mySpecialPopup" class="ui special popup"&gt;
         &lt;div class="header">This is SPECIAL&lt;/div&gt;
@@ -30,6 +38,7 @@
       &lt;/div&gt;
     \{{/ui-popup}}
   </pre>
+  <div class="ui segment grey">
   {{#ui-popup popupTarget='#mySpecialPopup'}}
     Hover
     <div id="mySpecialPopup" class="ui special popup">
@@ -39,34 +48,45 @@
       </div>
     </div>
   {{/ui-popup}}
+  </div>
 </div>
 
 <div class="ui segment">
-  <pre>
-    \{{#ui-popup popupContent='Bottom Center' position='bottom center'}}
-      &lt;div class="ui button red"&gt;
-        Hover
-      &lt;/div"&gt;
+  <div class="ui header">
+    Specify the opening location of the popup
+  </div>
+  <pre class="ui segment green">
+    \{{#ui-popup popupContent='Bottom Center' <span class="ui label olive">position='bottom center'</span>}}
+      &lt;div class="ui button red"&gt;Hover&lt;/div"&gt;
     \{{/ui-popup}}
   </pre>
-  {{#ui-popup popupContent='Bottom Center' position='bottom center' }}
-      <div class="ui button red">
-        Hover
-      </div>
-  {{/ui-popup}}
+  <div class="ui segment grey">
+    {{#ui-popup popupContent='Bottom Center' position='bottom center' }}
+        <div class="ui button red">
+          Hover
+        </div>
+    {{/ui-popup}}
+  </div>
 </div>
 
 <div class="ui segment">
-  Use transitions from <a href="http://semantic-ui.com/modules/transition.html">http://semantic-ui.com/modules/transition.html</a>
-  <pre>
+  <div class="ui header">
+    Use specific transitions
+  </div>
+   <div class="ui content">
+     from <a href="http://semantic-ui.com/modules/transition.html">http://semantic-ui.com/modules/transition.html</a>
+   </div>
+  <pre class="ui segment green">
     \{{#ui-popup popupContent='Right center with transition'
-                 position='right center'
-                 <span class="ui label olive">transition='fly left'</span>
+                position='right center'
+                <span class="ui label olive">transition='fly left'</span>
     }}
       Hover
     \{{/ui-popup}}
   </pre>
-  {{#ui-popup popupContent='Right center with transition' position='right center' transition='fly left' }}
-      Hover
-  {{/ui-popup}}
+  <div class="ui segment grey">
+    {{#ui-popup popupContent='Right center with transition' position='right center' transition='fly left' }}
+        Hover
+    {{/ui-popup}}
+  </div>
 </div>

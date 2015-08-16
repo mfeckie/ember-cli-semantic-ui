@@ -6,8 +6,11 @@
 </div>
 
 <div class="ui segment">
+  <div class="ui header">
+    Display as a simple group
+  </div>
   Selected item value is: {{checked}}
-  <pre>
+  <pre class="ui segment green">
     \{{ui-radio-collection
       optionCollection=namedCollection
       checked=checked
@@ -15,12 +18,17 @@
       label='color'
     }}
   </pre>
-  {{ui-radio-collection optionCollection=namedCollection checked=checked value='rgb' label='color'}}
+  <div class="ui segment grey">
+    {{ui-radio-collection optionCollection=namedCollection checked=checked value='rgb' label='color'}}
+  </div>
 </div>
 
 <div class="ui segment">
+  <div class="ui header">
+    Group the options
+  </div>
   Selected item value is: {{checked}}
-  <pre>
+  <pre class="ui segment green">
     \{{ui-radio-collection
       optionCollection=namedCollection
       checked=checked
@@ -29,5 +37,7 @@
       <span class="ui label olive">group=true</span>
     }}
   </pre>
-  {{ui-radio-collection optionCollection=namedCollection checked=checked value='rgb' label='color' group=true}}
+  <div class="ui segment grey">
+    {{ui-radio-collection optionCollection=namedCollection checked=checked value='rgb' label='color' group=true}}
+  </div>
 </div>
