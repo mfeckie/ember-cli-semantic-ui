@@ -4,6 +4,10 @@ A library to add Semantic to your Ember projects
 
 For documentation and examples visit http://mfeckie.github.io/ember-cli-semantic-ui
 
+## Installation
+
+* `ember install ember-cli-semantic-ui`
+
 ## Running Tests
 
 * `ember test`
