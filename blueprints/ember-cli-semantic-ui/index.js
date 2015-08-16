@@ -1,5 +1,5 @@
 module.exports = {
-  afterInstall: function {
+  afterInstall: function () {
     return this.addBowerPackageToProject('semantic-ui');
   }
 };
