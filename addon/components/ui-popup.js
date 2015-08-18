@@ -21,6 +21,9 @@ export default Ember.Component.extend({
     if(this.get('transition')) {
       popupOptions.transition = this.get('transition');
     }
+    if(this.get('hoverable')) {
+      popupOptions.hoverable = this.get('hoverable');
+    }
     this.$().popup(popupOptions);
   }
 });
