@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('popup');
   this.route('dimmer');
   this.route('shape');
+  this.route('dropdown');
 });
 
 export default Router;
