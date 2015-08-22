@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('accordion');
   this.route('popup');
   this.route('dimmer');
+  this.route('shape');
 });
 
 export default Router;

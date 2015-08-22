@@ -1,0 +1,93 @@
+<h1>Shape</h1>
+
+<div class="ui segment raised">
+  <p>
+    Shapey stuff
+  </p>
+  <p>
+    Animation type can be found <a href="http://semantic-ui.com/modules/shape.html#/usage">here</a>.
+  </p>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Simple shape
+  </div>
+
+  <pre class="ui segment green">
+    <code>
+      \{{#ui-shape buttonLabel='Flip!' transitionType='flip down'}}
+        &lt;div class="ui shape"&gt;
+          &lt;div class="sides"&gt;
+            &lt;div class="side active"&gt;The active side&lt;/div&gt;
+            &lt;div class="side"&gt;The second side&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      \{{/ui-shape}}
+    </code>
+  </pre>
+  <div class="ui segment grey">
+    {{#ui-shape buttonLabel='Flip!' transitionType='flip down'}}
+      <div class="ui shape">
+        <div class="sides">
+          <div class="side active">The active side</div>
+          <div class="side">The second side</div>
+        </div>
+      </div>
+    {{/ui-shape}}
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Shorter duration
+  </div>
+
+  <pre class="ui segment green">
+      \{{#ui-shape buttonLabel='testLabel' duration=100}}
+        &lt;div class="ui shape"&gt;
+          &lt;div class="sides"&gt;
+            &lt;div class="side active"&gt;The active side&lt;/div&gt;
+            &lt;div class="side"&gt;The second side&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      \{{/ui-shape}}
+  </pre>
+  <div class="ui segment grey">
+    {{#ui-shape buttonLabel='testLabel' duration=100}}
+      <div class="ui shape">
+        <div class="sides">
+          <div class="side active">The active side</div>
+          <div class="side">The second side</div>
+        </div>
+      </div>
+    {{/ui-shape}}
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Choose transition
+  </div>
+
+  <pre class="ui segment green">
+      \{{#ui-shape buttonLabel='testLabel' transitionType='flip over'}}
+        &lt;div class="ui shape"&gt;
+          &lt;div class="sides"&gt;
+            &lt;div class="side active"&gt;The active side&lt;/div&gt;
+            &lt;div class="side"&gt;The second side&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      \{{/ui-shape}}
+  </pre>
+  <div class="ui segment grey">
+    {{#ui-shape buttonLabel='testLabel' transitionType='flip over'}}
+      <div class="ui shape">
+        <div class="sides">
+          <div class="side active">The active side</div>
+          <div class="side">The second side</div>
+        </div>
+      </div>
+    {{/ui-shape}}
+  </div>
+</div>
