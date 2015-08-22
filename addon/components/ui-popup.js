@@ -1,29 +1,13 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-popup';
+import OptionCollect from 'ember-cli-semantic-ui/mixins/option-collect';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(OptionCollect, {
   tagName: 'span',
   layout: layout,
+  availableOptions: ['popupContent', 'title', 'popupTarget', 'position', 'transition', 'hoverable'],
   didInsertElement: function () {
-    var popupOptions = {};
-    if(this.get('popupContent')) {
-      popupOptions.content = this.get('popupContent');
-    }
-    if(this.get('title')) {
-      popupOptions.title = this.get('title');
-    }
-    if(this.get('popupTarget')) {
-      popupOptions.popup = this.get('popupTarget');
-    }
-    if(this.get('position')) {
-      popupOptions.position = this.get('position');
-    }
-    if(this.get('transition')) {
-      popupOptions.transition = this.get('transition');
-    }
-    if(this.get('hoverable')) {
-      popupOptions.hoverable = this.get('hoverable');
-    }
+    var popupOptions = this.collectOptions();
     this.$().popup(popupOptions);
   }
 });

@@ -1,14 +1,14 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-shape';
+import OptionCollect from 'ember-cli-semantic-ui/mixins/option-collect';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(OptionCollect, {
   layout: layout,
+  availableOptions: ['duration'],
   didInsertElement () {
     var shapeElement = this.$('.ui.shape');
-    var options = {};
-    if(this.get('duration')) {
-      options.duration = this.get('duration');
-    }
+    var options = this.collectOptions();
+
     shapeElement.shape(options);
     this.set('shapeElement', shapeElement);
   },
