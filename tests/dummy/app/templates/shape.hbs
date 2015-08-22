@@ -2,7 +2,7 @@
 
 <div class="ui segment raised">
   <p>
-    Shapey stuff
+    A shape is a three dimensional object displayed on a two dimensional plane
   </p>
   <p>
     Animation type can be found <a href="http://semantic-ui.com/modules/shape.html#/usage">here</a>.
@@ -86,6 +86,57 @@
         <div class="sides">
           <div class="side active">The active side</div>
           <div class="side">The second side</div>
+        </div>
+      </div>
+    {{/ui-shape}}
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Make it a cube
+  </div>
+
+  <pre class="ui segment green">
+      \{{#ui-shape buttonLabel='Flip Right' transitionType='flip right'}}
+        &lt;div class="ui cube shape"&gt;
+          &lt;div class="sides"&gt;
+            &lt;div class="active side"&gt;
+              &lt;div class="content"&gt;
+                &lt;div class="center"&gt;
+                  1
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="side"&gt;
+              &lt;div class="content"&gt;
+                &lt;div class="center"&gt;
+                  2
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      \{{/ui-shape}}
+  </pre>
+  <div class="ui segment grey">
+    {{#ui-shape buttonLabel='Flip Right' transitionType='flip right'}}
+      <div class="ui cube shape">
+        <div class="sides">
+          <div class="active side">
+            <div class="content">
+              <div class="center">
+                1
+              </div>
+            </div>
+          </div>
+          <div class="side">
+            <div class="content">
+              <div class="center">
+                2
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     {{/ui-shape}}
