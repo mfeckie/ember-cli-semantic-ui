@@ -1,19 +1,22 @@
+/* globals QUnit */
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import Ember from 'ember';
 
 moduleForComponent('ui-progress', 'Integration | Component | ui progress', {
   integration: true
 });
 
-test('It updates the progess width on progress change', function(assert) {
-  assert.expect(2);
+test('It updates the bar width on progress change', function(assert) {
   this.set('progress', 0);
 
   this.render(hbs`{{ui-progress progress=progress}}`);
-
-  assert.equal(this.$('.progress').last().width(), 0);
-
+  var startWidth = this.$('.bar').width();
+  QUnit.stop();
   this.set('progress', 50);
-
-  assert.ok(this.$('.progress').last().width() > 0);
+  Ember.run.later(() => {
+    var finishWidth = this.$('.bar').width();
+    assert.ok(startWidth !== finishWidth);
+    QUnit.start();
+  }, 100);
 });

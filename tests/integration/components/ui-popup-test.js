@@ -27,9 +27,9 @@ test('It displays popup on hover', function (assert){
   QUnit.stop();
   this.$('span').triggerHandler('mouseover');
   Ember.run.later(() => {
-    QUnit.start();
     var popup = Ember.$('.ui.popup.top.left.transition.visible');
     assert.ok(popup.length === 1);
     this.$('span').triggerHandler('mouseout');
-  }, 300);
+    QUnit.start();
+  }, 400);
 });
