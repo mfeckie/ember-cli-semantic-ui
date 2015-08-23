@@ -3,13 +3,25 @@
   <p>
     Semantic UI dropdown implementation
   </p>
+  <p>
+    So far, only the straight HTML version has been implemented.  Converting
+    an existing select element is currently not on the development map, but a
+    pull request to add it would likely be accepted.
+  </p>
 </div>
 
 <div class="ui segment">
   <div class="ui header">
-
+      Binding the selected item.
   </div>
+
+  <p>
+    Note the use of <code>data-value</code> for binding particular value.
+    Default behaviour when not specified is to downcase the "item" text.
+  </p>
+
   <pre class="ui segment green">
+
     \{{#ui-dropdown selected=selected}}
       &lt;div class="defaul text"&gt;Pick a color....&lt;/div&gt;
       &lt;i class="dropdown icon"&gt;&lt;/i&gt;
@@ -42,11 +54,14 @@
       </div>
     {{/ui-dropdown}}
   </div>
+  <div class="ui segment blue">
+    Selected: {{selected}}
+  </div>
 </div>
 
 <div class="ui segment">
   <div class="ui header">
-
+    Passing a styling class
   </div>
   <pre class="ui segment green">
     \{{#ui-dropdown class='selection' selected=selected}}
@@ -81,11 +96,14 @@
       </div>
     {{/ui-dropdown}}
   </div>
+  <div class="ui segment blue">
+    Selected: {{selected}}
+  </div>
 </div>
 
 <div class="ui segment">
   <div class="ui header">
-
+    Passing search and selection class
   </div>
   <pre class="ui segment green">
     \{{#ui-dropdown class='search selection' selected=selected}}
@@ -120,14 +138,21 @@
       </div>
     {{/ui-dropdown}}
   </div>
+  <div class="ui segment blue">
+    Selected: {{selected}}
+  </div>
 </div>
 
 <div class="ui segment">
   <div class="ui header">
-
+    Passing the multiple select.
   </div>
+  <p>
+    Note that when using multiple select, you will be returned a comma separated
+    string of values.  How you wish to consume this is left to the user.
+  </p>
   <pre class="ui segment green">
-    \{{#ui-dropdown class='selection multiple normal' selected=selected }}
+    \{{#ui-dropdown class='selection multiple' selected=selected }}
       &lt;div class="defaul text"&gt;Pick a color....&lt;/div&gt;
       &lt;i class="dropdown icon"&gt;&lt;/i&gt;
       &lt;div class="menu"&gt;
@@ -144,7 +169,7 @@
   </pre>
   <div class="ui segment grey">
     <h4>Selected: {{selected}}</h4>
-    {{#ui-dropdown class='selection multiple normal' selected=selected }}
+    {{#ui-dropdown class='selection multiple' selected=selected }}
       <div class="defaul text">Pick a color....</div>
       <i class="dropdown icon"></i>
       <div class="menu">
@@ -158,5 +183,8 @@
         </div>
       </div>
     {{/ui-dropdown}}
+  </div>
+  <div class="ui segment blue">
+    Selected: {{selected}}
   </div>
 </div>
