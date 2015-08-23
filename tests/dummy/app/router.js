@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('dimmer');
   this.route('shape');
   this.route('dropdown');
+  this.route('modal');
 });
 
 export default Router;

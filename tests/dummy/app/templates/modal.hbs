@@ -1,0 +1,203 @@
+<h1>Modal</h1>
+
+<div class="ui segment raised">
+  <p>
+    Modals can be simple message or have associated behaviour.
+    Most customization is done via the wrapped HTML.
+    See <a href="http://semantic-ui.com/modules/modal.html#/definition">Semantic Modal</a> for all available options
+  </p>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Simple modal
+  </div>
+  <pre class="ui segment green">
+\{{#ui-modal}}
+  &lt;div class="ui button"&gt;
+    Open Me!
+  &lt;/div&gt;
+  &lt;div class="ui modal"&gt;
+    &lt;div class="ui header"&gt;
+      This is a simple modal
+    &lt;/div&gt;
+    &lt;div class="ui content"&gt;
+      &lt;div class="ui description"&gt;
+        We just show some informational text
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="actions"&gt;
+      &lt;div class="ui button green positive"&gt;
+        OK
+        &lt;i class="checkmark icon"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    \{{/ui-modal}}
+  </pre>
+
+  <div class="ui segment grey">
+    {{#ui-modal}}
+      <div class="ui button">
+        Open Me!
+      </div>
+      <div class="ui modal">
+        <div class="ui header">
+          This is a simple modal
+        </div>
+        <div class="ui content">
+          <div class="ui description">
+            We just show some informational text
+          </div>
+        </div>
+        <div class="actions">
+          <div class="ui button green positive">
+            OK
+            <i class="checkmark icon"></i>
+          </div>
+        </div>
+      </div>
+    {{/ui-modal}}
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Modal with actions
+  </div>
+  <p>
+    Actions should be handled on your controller.
+  </p>
+  <pre class="ui segment green">
+\{{#ui-modal}}
+  &lt;div class="ui button"&gt;
+    Show Modal
+  &lt;/div&gt;
+  &lt;div class="ui basic modal"&gt;
+    &lt;i class="close icon"&gt;&lt;/i&gt;
+    &lt;div class="header"&gt;
+      Archive Old Messages
+    &lt;/div&gt;
+    &lt;div class="image content"&gt;
+      &lt;div class="image"&gt;
+        &lt;i class="archive icon"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div class="description"&gt;
+        &lt;p&gt;Your inbox is getting full, would you like us to enable automatic archiving of old messages?&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="actions"&gt;
+      &lt;div class="two fluid ui inverted buttons"&gt;
+        &lt;div class="ui red basic inverted button"\{{action 'noRemove'}}&gt;
+          &lt;i class="remove icon"&gt;&lt;/i&gt;
+          No
+        &lt;/div&gt;
+        &lt;div class="ui green basic inverted button" \{{action 'remove'}}&gt;
+          &lt;i class="checkmark icon"&gt;&lt;/i&gt;
+          Yes
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    \{{/ui-modal}}
+  </pre>
+  <div class="ui segment grey">
+    {{#ui-modal}}
+      <div class="ui button">
+        Show Modal
+      </div>
+      <div class="ui basic modal">
+        <i class="close icon"></i>
+
+        <div class="header">
+          Archive Old Messages
+        </div>
+        <div class="image content">
+          <div class="image">
+            <i class="archive icon"></i>
+          </div>
+          <div class="description">
+            <p>Your inbox is getting full, would you
+              like us to enable automatic archiving
+              of old messages?</p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="two fluid ui inverted buttons">
+            <div class="ui red basic inverted button"{{action 'noRemove'}}>
+              <i class="remove icon"></i>
+              No
+            </div>
+            <div class="ui green basic inverted button" {{action 'remove'}}>
+              <i class="checkmark icon"></i>
+              Yes
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/ui-modal}}
+  </div>
+  <div class="ui segment blue">
+    Action triggered: {{actionTriggered}}
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Pick the element to trigger the modal
+  </div>
+  <pre class="ui segment green">
+\{{#ui-modal triggerElement='#iconTrigger'}}
+  &lt;i id='iconTrigger' class="comment icon"&gt; &lt;/i&gt;
+
+  &lt;div class="ui basic modal"&gt;
+    &lt;i class="close icon"&gt;&lt;/i&gt;
+
+    &lt;div class="header"&gt;
+      Do you really want to read the comments???
+    &lt;/div&gt;
+    &lt;div class="image content"&gt;
+      &lt;div class="image"&gt;
+        &lt;i class="comments icon"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div class="description"&gt;
+        &lt;p&gt;It's gonna make you sad if you do!&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="actions"&gt;
+      &lt;div class="ui green basic inverted button positive"&gt;
+        &lt;i class="remove icon"&gt;&lt;/i&gt;
+        Get me outta here!
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+\{{/ui-modal}}
+  </pre>
+  <div class="ui segment grey">
+    {{#ui-modal triggerElement='#iconTrigger'}}
+      <i id='iconTrigger' class="comment icon"> </i>
+
+      <div class="ui basic modal">
+        <i class="close icon"></i>
+
+        <div class="header">
+          Do you really want to read the comments???
+        </div>
+        <div class="image content">
+          <div class="image">
+            <i class="comments icon"></i>
+          </div>
+          <div class="description">
+            <p>It's gonna make you sad if you do!</p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="ui green basic inverted button positive">
+            <i class="remove icon"></i>
+            Get me outta here!
+          </div>
+        </div>
+      </div>
+    {{/ui-modal}}
+  </div>
+</div>
