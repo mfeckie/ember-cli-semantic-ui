@@ -33,7 +33,7 @@ test('it dims', function(assert) {
 });
 
 
-test('it dims', function(assert) {
+test('it dims specific element', function(assert) {
 
   this.render(hbs`
     {{#ui-dimmable targetElement='#dimMe'}}

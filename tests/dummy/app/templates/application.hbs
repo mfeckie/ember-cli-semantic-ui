@@ -1,20 +1,22 @@
-<div class="ui page grid">
-  <div class="eleven wide column">
-    <h2 id="title">Welcome to Semantic UI for Ember</h2>
-    <div class="ui menu">
-      {{#link-to 'index' class='item'}}Home{{/link-to}}
-      {{#link-to 'checkbox' class='item'}}Checkbox{{/link-to}}
-      {{#link-to 'radio' class='item'}}Radio{{/link-to}}
-      {{#link-to 'accordion' class='item'}}Accordion{{/link-to}}
-      {{#link-to 'popup' class='item'}}Popup{{/link-to}}
-      {{#link-to 'dimmer' class='item'}}Dimmer{{/link-to}}
-      {{#link-to 'shape' class='item'}}Shape{{/link-to}}
-      {{#link-to 'dropdown' class='item'}}Dropdown{{/link-to}}
+<div class="ui container">
+  <div class="ui page grid">
+    <div class="sixteen wide column">
+      <h2 id="title">Welcome to Semantic UI for Ember</h2>
+      <div class="ui menu">
+        {{#link-to 'index' class='item'}}Home{{/link-to}}
+        {{#link-to 'checkbox' class='item'}}Checkbox{{/link-to}}
+        {{#link-to 'radio' class='item'}}Radio{{/link-to}}
+        {{#link-to 'accordion' class='item'}}Accordion{{/link-to}}
+        {{#link-to 'popup' class='item'}}Popup{{/link-to}}
+        {{#link-to 'dimmer' class='item'}}Dimmer{{/link-to}}
+        {{#link-to 'shape' class='item'}}Shape{{/link-to}}
+        {{#link-to 'dropdown' class='item'}}Dropdown{{/link-to}}
+      </div>
+      <div class="ui menu">
+        {{#link-to 'modal' class='item'}}Modal{{/link-to}}
+        {{#link-to 'sticky' class='item'}}Sticky{{/link-to}}
+      </div>
+      {{outlet}}
     </div>
-    <div class="ui menu">
-      {{#link-to 'modal' class='item'}}Modal{{/link-to}}
-    </div>
-
-    {{outlet}}
   </div>
 </div>

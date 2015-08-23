@@ -6,7 +6,7 @@ moduleForComponent('ui-dropdown', 'Integration | Component | ui dropdown', {
   integration: true
 });
 
-test('it renders', function(assert) {
+test('it dropdown and responds to change events', function(assert) {
   assert.expect(2);
   this.set('selected', 'red');
   // Template block usage:

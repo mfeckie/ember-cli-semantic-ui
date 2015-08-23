@@ -1,0 +1,76 @@
+
+<h1>Sticky</h1>
+
+<div class="ui segment raised">
+  <p>
+    Make a sticky element follow its parent element.
+  </p>
+  <p>
+    See <a href="http://semantic-ui.com/modules/sticky.html#/examples">documentation</a> for more usage examples.
+  </p>
+</div>
+<div class="ui segment">
+  <div class="ui header">
+    Wrapping sticky in ui rail
+  </div>
+
+  <pre class="ui segment green">
+    &lt;div class="ui right rail"&gt;
+      \{{#ui-sticky}}
+        &lt;div class="ui button blue"&gt;Sticky button right&lt;/div&gt;
+      \{{/ui-sticky}}
+    &lt;/div&gt;
+    &lt;div class="ui left rail"&gt;
+      \{{#ui-sticky}}
+        &lt;div class="ui button green"&gt;Sticky button left&lt;/div&gt;
+      \{{/ui-sticky}}
+    &lt;/div&gt;
+  </pre>
+  <div class="ui segment grey">
+    <div class="ui right rail">
+      {{#ui-sticky}}
+        <div class="ui button blue">Sticky button right</div>
+      {{/ui-sticky}}
+    </div>
+    <div class="ui left rail">
+      {{#ui-sticky}}
+        <div class="ui button green">Sticky button left</div>
+      {{/ui-sticky}}
+    </div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+
+</div>
+
+
+<div class="ui segment">
+
+  <div class="ui header">
+    With a target element
+  </div>
+
+  <pre class="ui segment green">
+    &lt;div id="left-rail1" class="ui left internal rail"&gt;&lt;/div&gt;
+    \{{#ui-sticky targetElement='#left-rail1'}}
+      &lt;div class="ui button"&gt;Sticky button&lt;/div&gt;
+    \{{/ui-sticky}}
+  </pre>
+  <div class="ui segment grey">
+    <div id="left-rail1" class="ui left internal rail"></div>
+    {{#ui-sticky targetElement='#left-rail1'}}
+      <div id='sb' class="ui button">Sticky button</div>
+    {{/ui-sticky}}
+    <div class="ui grid">
+      <div class="five wide column centered">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+  </div>
+
+</div>

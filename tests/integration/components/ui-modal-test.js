@@ -7,7 +7,7 @@ moduleForComponent('ui-modal', 'Integration | Component | ui modal', {
   integration: true
 });
 
-test('it renders', function(assert) {
+test('it displays modal on clicking trigger element', function(assert) {
   assert.expect(2);
   this.render(hbs`
     {{#ui-modal}}
