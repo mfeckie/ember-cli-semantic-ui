@@ -1,0 +1,71 @@
+<h1>Progress</h1>
+
+<div class="ui segment raised">
+  <p>
+    
+  </p>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Simple progress binding
+  </div>
+  <p>
+    Current progress is {{progressPercent}}
+  </p>
+  <pre class="ui segment green">
+    \{{ui-progress progress=progressPercent}}
+  </pre>
+  <div class="ui segment grey">
+    {{ui-progress progress=progressPercent}}
+    <div class="ui button orange" {{action 'changeProgress'}}>Change progress</div>
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    With indicating class
+  </div>
+  <p>
+    Current progress is {{progressPercent}}
+  </p>
+  <pre class="ui segment green">
+    \{{ui-progress progress=progressPercent class='indicating'}}
+  </pre>
+  <div class="ui segment grey">
+    {{ui-progress progress=progressPercent class='indicating'}}
+    <div class="ui button orange" {{action 'changeProgress'}}>Change progress</div>
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    Show inline progress text
+  </div>
+  <p>
+    Current progress is {{progressPercent}}
+  </p>
+  <pre class="ui segment green">
+    \{{ui-progress progress=progressPercent showProgress=true}}
+  </pre>
+  <div class="ui segment grey">
+    {{ui-progress progress=progressPercent showProgress=true}}
+    <div class="ui button orange" {{action 'changeProgress'}}>Change progress</div>
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui header">
+    With a label
+  </div>
+  <p>
+    Current progress is {{progressPercent}}
+  </p>
+  <pre class="ui segment green">
+    \{{ui-progress progress=progressPercent label='Widgets'}}
+  </pre>
+  <div class="ui segment grey">
+    {{ui-progress progress=progressPercent label='Widgets'}}
+    <div class="ui button orange" {{action 'changeProgress'}}>Change progress</div>
+  </div>
+</div>
