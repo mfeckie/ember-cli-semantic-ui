@@ -1,0 +1,64 @@
+<h1>Form</h1>
+<div class="ui segment raised">
+  <p>
+    Semantic UI form implementation
+  </p>
+</div>
+
+<div class="ui segment">
+  Controller:
+  <pre class="ui segment green">
+  <code>
+    import Ember from 'ember';
+
+    export default Ember.Controller.extend({
+      settings: {
+          inline: true,
+          fields: {
+            firstName: 'empty',
+            lastName: 'empty'
+          }
+      },
+      actions: {
+        save(){
+          this.set('onSubmit', true);
+        }
+      }
+    });
+  </code>
+  </pre>
+  Template:
+  <pre class="ui segment green">
+    \{{#ui-form action='save' settings=settings}}
+    &lt;div class="field"&gt;
+      &lt;label&gt;First Name&lt;/label&gt;
+      \{{input type='text' name='firstName' placeholder="First Name" value=firstName}}
+    &lt;/div&gt;
+    &lt;div class="field"&gt;
+      &lt;label>Last Name&lt;/label&gt;
+      \{{input type='text' name='lastName' placeholder="Last Name" value=lastName}}
+    &lt;/div&gt;
+    \{{input type='submit' value='Join' class='ui button'}}
+    \{{/ui-form}}
+  </pre>
+  <div class="ui segment grey">
+    <h4>Form</h4>
+    {{#ui-form action='save' settings=settings}}
+    <div class="field">
+      <label>First Name</label>
+      {{input type='text' name='firstName' placeholder="First Name" value=firstName}}
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      {{input type='text' name='lastName' placeholder="Last Name" value=lastName}}
+    </div>
+    {{input type='submit' value='Join' class='ui button'}}
+    {{/ui-form}}
+  </div>
+  {{#if onSubmit}}
+  <div class="ui segment blue">
+    First Name: {{firstName}}<br/>
+    Last Name: {{lastName}}
+  </div>
+  {{/if}}
+</div>

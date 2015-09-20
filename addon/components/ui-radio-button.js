@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     return this.get('value') === this.get('checked');
   }),
 
-  change: function() {
+  change() {
     this.set('checked', this.get('value'));
   }
 });

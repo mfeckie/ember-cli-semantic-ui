@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('modal');
   this.route('sticky');
   this.route('progress');
+  this.route('form');
 });
 
 export default Router;

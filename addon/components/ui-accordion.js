@@ -1,9 +1,7 @@
 import Ember from 'ember';
+import SettingsMixin from '../mixins/settings';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(SettingsMixin, {
   classNames: ['ui', 'accordion'],
-  didInsertElement: function () {
-    this._super();
-    this.$().accordion();
-  }
+  moduleName: 'accordion'
 });
