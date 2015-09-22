@@ -1,17 +1,17 @@
 import Ember from 'ember';
-import SettingsMixin from 'ember-cli-semantic-ui/mixins/settings';
+import SemanticSettingsMixin from 'ember-cli-semantic-ui/mixins/semantic-settings';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | settings');
 
 test('it works when "moduleName" defined', function(assert) {
-  var SettingsObject = Ember.Object.extend(SettingsMixin);
+  var SettingsObject = Ember.Object.extend(SemanticSettingsMixin);
   var subject = SettingsObject.create({moduleName: 'testModule'});
   assert.ok(subject);
 });
 
 test('it works when "moduleName" is not defined', function(assert) {
-  var SettingsObject = Ember.Object.extend(SettingsMixin);
+  var SettingsObject = Ember.Object.extend(SemanticSettingsMixin);
   assert.throws(
     function(){
       SettingsObject.create();
