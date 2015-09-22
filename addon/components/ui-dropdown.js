@@ -1,15 +1,15 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-dropdown';
-import SettingsMixin from '../mixins/settings';
+import SemanticSettings from '../mixins/semantic-settings';
 
-export default Ember.Component.extend(SettingsMixin, {
+export default Ember.Component.extend(SemanticSettings, {
   layout: layout,
   classNames: ['ui', 'dropdown'],
   moduleName: 'dropdown',
   didInsertElement () {
     var component = this;
     var selected = this.get('selected');
-    this.setSettings({
+    this.setSemanticConfiguration({
       onChange (value /* , text, $selectedItem */) {
         component.set('selected', value);
       }

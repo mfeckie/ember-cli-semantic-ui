@@ -1,8 +1,8 @@
 import Ember from 'ember';
-import SettingsMixin from '../mixins/settings';
 import layout from '../templates/components/ui-checkbox';
+import SemanticSettings from '../mixins/semantic-settings';
 
-export default Ember.Component.extend(SettingsMixin, {
+export default Ember.Component.extend(SemanticSettings, {
   classNames: ['ui', 'checkbox'],
   moduleName: 'checkbox',
   init: function () {

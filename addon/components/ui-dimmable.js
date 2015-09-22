@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import SettingsMixin from '../mixins/settings';
+import SemanticSettings from '../mixins/semantic-settings';
 
-export default Ember.Component.extend(SettingsMixin, {
+export default Ember.Component.extend(SemanticSettings, {
   classNames: ['ui', 'dimmable'],
   moduleName: 'dimmer',
   click() {
