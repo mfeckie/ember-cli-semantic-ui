@@ -1,9 +1,7 @@
 import Ember from 'ember';
+import SemanticSettings from '../mixins/semantic-settings';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(SemanticSettings, {
   classNames: ['ui', 'accordion'],
-  didInsertElement: function () {
-    this._super();
-    this.$().accordion();
-  }
+  moduleName: 'accordion'
 });
