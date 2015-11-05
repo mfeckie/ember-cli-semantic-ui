@@ -13,5 +13,9 @@ export default Ember.Component.extend({
     this.$(triggerElement).on('click', function () {
       modalElement.modal('toggle');
     });
+  },
+  willDestroyElement() {
+    this.$()[this.get('moduleName')]('destroy');
+    this._super();
   }
 });
