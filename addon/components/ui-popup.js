@@ -10,5 +10,9 @@ export default Ember.Component.extend(OptionCollect, {
     var popupOptions = this.collectOptions();
 
     this.$().popup(popupOptions);
+  },
+  willDestroyElement() {
+    this.$().popup('destroy');
+    this._super();
   }
 });

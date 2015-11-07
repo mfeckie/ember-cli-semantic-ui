@@ -18,5 +18,9 @@ export default Ember.Mixin.create({
   },
   setSemanticConfiguration(settings) {
     this.set('semanticConfiguration', Ember.$.merge(settings, this.getWithDefault('semanticConfiguration', {})));
+  },
+  willDestroyElement() {
+    this.$()[this.get('moduleName')]('destroy');
+    this._super();
   }
 });
