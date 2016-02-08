@@ -6,7 +6,7 @@ moduleForComponent('ui-radio-collection', 'Integration | Component | ui radio co
 });
 
 test('renders named pairs', function (assert){
-  var namedPair = [
+  const namedPair = [
     {color: 'white', rgb: '#FFF'},
     {color: 'blue', rgb: '#000'}
   ];

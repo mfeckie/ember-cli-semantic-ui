@@ -10,7 +10,7 @@ export default Ember.Component.extend(SemanticSettings, {
     const component = this;
     const selected = this.get('selected');
     this.setSemanticConfiguration({
-      onChange (value /* , text, $selectedItem */) {
+      onChange (value) {
         component.set('selected', value);
       },
       fullTextSearch: this.get('fullTextSearch') || false

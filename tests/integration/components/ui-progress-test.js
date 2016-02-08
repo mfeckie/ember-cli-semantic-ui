@@ -11,11 +11,11 @@ test('It updates the bar width on progress change', function(assert) {
   this.set('progress', 0);
 
   this.render(hbs`{{ui-progress progress=progress}}`);
-  var startWidth = this.$('.bar').width();
+  const startWidth = this.$('.bar').width();
   QUnit.stop();
   this.set('progress', 50);
   Ember.run.later(() => {
-    var finishWidth = this.$('.bar').width();
+    const finishWidth = this.$('.bar').width();
     assert.ok(startWidth !== finishWidth);
     QUnit.start();
   }, 100);

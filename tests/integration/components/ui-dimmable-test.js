@@ -23,11 +23,11 @@ test('it dims', function(assert) {
       template block text
     {{/ui-dimmable}}
   `);
-  var element = this.$().find('.ui.dimmable');
-  var beforeClass = element.attr('class');
+  const element = this.$().find('.ui.dimmable');
+  const beforeClass = element.attr('class');
   assert.equal(beforeClass, 'ember-view ui dimmable');
   element.click();
-  var afterClass = element.attr('class');
+  const afterClass = element.attr('class');
   assert.equal(afterClass, 'ember-view ui dimmable dimmed');
 
 });
@@ -43,7 +43,7 @@ test('it dims specific element', function(assert) {
       </div>
     {{/ui-dimmable}}
   `);
-  var dimmable = this.$().find('#dimMe');
+  const dimmable = this.$().find('#dimMe');
 
   assert.equal(dimmable.attr('class'), 'ui dimmable');
   this.$().find('#dimMe').click();

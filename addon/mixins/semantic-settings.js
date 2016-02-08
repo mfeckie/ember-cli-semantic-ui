@@ -7,14 +7,14 @@ export default Ember.Mixin.create({
     Ember.assert('You must set a moduleName string to use this mixin', this.get('moduleName'));
   },
   didInsertElement() {
-    var moduleName = this.get('moduleName');
-    this._super();
-    var semanticConfiguration = this.get('semanticConfiguration');
+    const moduleName = this.get('moduleName');
+    const semanticConfiguration = this.get('semanticConfiguration');
     if(Ember.$.isPlainObject(semanticConfiguration)) {
       this.$()[moduleName](semanticConfiguration);
     } else {
       this.$()[moduleName]();
     }
+    this._super();
   },
   setSemanticConfiguration(settings) {
     this.set('semanticConfiguration', Ember.$.merge(settings, this.getWithDefault('semanticConfiguration', {})));

@@ -5,12 +5,11 @@ export default Ember.Component.extend({
   layout: layout,
   moduleName: 'modal',
   didInsertElement () {
-    //this._super();
-    var modalElement = this.$('.ui.modal');
+    const modalElement = this.$('.ui.modal');
 
-    var triggerElement = this.get('triggerElement') || '.ui.button';
+    const triggerElement = this.get('triggerElement') || '.ui.button';
 
-    this.$(triggerElement).on('click', function () {
+    this.$(triggerElement).on('click', () => {
       modalElement.modal('toggle');
     });
   },

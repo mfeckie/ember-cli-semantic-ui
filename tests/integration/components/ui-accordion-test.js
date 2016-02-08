@@ -15,7 +15,7 @@ test('Renders accordion and sections', function(assert) {
     {{/ui-accordion}}
   `);
 
-  var text = this.$().text().trim();
+  const text = this.$().text().trim();
   assert.equal(text, 'Stuff in the middle');
 });
 

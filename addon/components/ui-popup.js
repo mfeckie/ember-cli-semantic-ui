@@ -7,7 +7,7 @@ export default Ember.Component.extend(OptionCollect, {
   layout: layout,
   availableOptions: ['content', 'title', 'popup', 'position', 'transition', 'hoverable'],
   didInsertElement: function () {
-    var popupOptions = this.collectOptions();
+    const popupOptions = this.collectOptions();
 
     this.$().popup(popupOptions);
   },

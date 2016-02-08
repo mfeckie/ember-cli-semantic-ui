@@ -5,13 +5,13 @@ import { module, test } from 'qunit';
 module('Unit | Mixin | settings');
 
 test('it works when "moduleName" defined', function(assert) {
-  var SettingsObject = Ember.Object.extend(SemanticSettingsMixin);
-  var subject = SettingsObject.create({moduleName: 'testModule'});
+  const SettingsObject = Ember.Object.extend(SemanticSettingsMixin);
+  const subject = SettingsObject.create({moduleName: 'testModule'});
   assert.ok(subject);
 });
 
 test('it works when "moduleName" is not defined', function(assert) {
-  var SettingsObject = Ember.Object.extend(SemanticSettingsMixin);
+  const SettingsObject = Ember.Object.extend(SemanticSettingsMixin);
   assert.throws(
     function(){
       SettingsObject.create();

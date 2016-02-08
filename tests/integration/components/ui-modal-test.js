@@ -26,14 +26,14 @@ test('it displays modal on clicking trigger element', function(assert) {
   //This is a bit funky, but we need to deal with transition times, hence the
   // delays...
   Ember.run.later(() => {
-    var modal = $('.ui.dimmer.modals.page.transition.visible.active');
+    const modal = $('.ui.dimmer.modals.page.transition.visible.active');
 
     assert.ok(modal.length === 1);
 
     this.$('.ui.button').click();
 
     Ember.run.later(() => {
-      var modal = $('.ui.dimmer.modals.page.transition.visible.active');
+      const modal = $('.ui.dimmer.modals.page.transition.visible.active');
 
       assert.ok(modal.length === 0);
       QUnit.start();
