@@ -7,14 +7,15 @@ export default Ember.Component.extend(SemanticSettings, {
   classNames: ['ui', 'dropdown'],
   moduleName: 'dropdown',
   didInsertElement () {
-    var component = this;
-    var selected = this.get('selected');
+    const component = this;
+    const selected = this.get('selected');
     this.setSemanticConfiguration({
       onChange (value /* , text, $selectedItem */) {
         component.set('selected', value);
-      }
+      },
+      fullTextSearch: this.get('fullTextSearch') || false
     });
-    this._super();
     this.$().dropdown('set selected', selected);
+    this._super();
   }
 });

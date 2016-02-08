@@ -12,18 +12,18 @@
 
 <div class="ui segment">
   <div class="ui header">
-      Binding the selected item.
+      Binding the selected item
   </div>
 
   <p>
     Note the use of <code>data-value</code> for binding particular value.
-    Default behaviour when not specified is to downcase the "item" text.
+    Defaultt behaviour when not specified is to downcase the "item" text.
   </p>
 
   <pre class="ui segment green">
 
     \{{#ui-dropdown selected=selected}}
-      &lt;div class="defaul text"&gt;Pick a color....&lt;/div&gt;
+      &lt;div class="default text"&gt;Pick a color....&lt;/div&gt;
       &lt;i class="dropdown icon"&gt;&lt;/i&gt;
       &lt;div class="menu"&gt;
         &lt;div data-value="red" class="item"&gt;Red&lt;/div&gt;
@@ -40,7 +40,7 @@
   <div class="ui segment grey">
     <h4>Selected: {{selected}}</h4>
     {{#ui-dropdown selected=selected}}
-      <div class="defaul text">Pick a color....</div>
+      <div class="default text">Pick a color....</div>
       <i class="dropdown icon"></i>
       <div class="menu">
         <div data-value="red" class="item">Red</div>
@@ -65,7 +65,7 @@
   </div>
   <pre class="ui segment green">
     \{{#ui-dropdown class='selection' selected=selected}}
-      &lt;div class="defaul text"&gt;Pick a color....&lt;/div&gt;
+      &lt;div class="default text"&gt;Pick a color....&lt;/div&gt;
       &lt;i class="dropdown icon"&gt;&lt;/i&gt;
       &lt;div class="menu"&gt;
         &lt;div data-value="red" class="item"&gt;Red&lt;/div&gt;
@@ -82,7 +82,7 @@
   <div class="ui segment grey">
     <h4>Selected: {{selected}}</h4>
     {{#ui-dropdown class='selection' selected=selected}}
-      <div class="defaul text">Pick a color....</div>
+      <div class="default text">Pick a color....</div>
       <i class="dropdown icon"></i>
       <div class="menu">
         <div data-value="red" class="item">Red</div>
@@ -107,7 +107,7 @@
   </div>
   <pre class="ui segment green">
     \{{#ui-dropdown class='search selection' selected=selected}}
-      &lt;div class="defaul text"&gt;Pick a color....&lt;/div&gt;
+      &lt;div class="default text"&gt;Pick a color....&lt;/div&gt;
       &lt;i class="dropdown icon"&gt;&lt;/i&gt;
       &lt;div class="menu"&gt;
         &lt;div data-value="red" class="item"&gt;Red&lt;/div&gt;
@@ -124,7 +124,7 @@
   <div class="ui segment grey">
     <h4>Selected: {{selected}}</h4>
     {{#ui-dropdown class='search selection' selected=selected}}
-      <div class="defaul text">Pick a color....</div>
+      <div class="default text">Pick a color....</div>
       <i class="dropdown icon"></i>
       <div class="menu">
         <div data-value="red" class="item">Red</div>
@@ -145,7 +145,7 @@
 
 <div class="ui segment">
   <div class="ui header">
-    Passing the multiple select.
+    Passing multiple select
   </div>
   <p>
     Note that when using multiple select, you will be returned a comma separated
@@ -153,7 +153,7 @@
   </p>
   <pre class="ui segment green">
     \{{#ui-dropdown class='selection multiple' selected=selected }}
-      &lt;div class="defaul text"&gt;Pick a color....&lt;/div&gt;
+      &lt;div class="default text"&gt;Pick a color....&lt;/div&gt;
       &lt;i class="dropdown icon"&gt;&lt;/i&gt;
       &lt;div class="menu"&gt;
         &lt;div data-value="red" class="item"&gt;Red&lt;/div&gt;
@@ -170,7 +170,54 @@
   <div class="ui segment grey">
     <h4>Selected: {{selected}}</h4>
     {{#ui-dropdown class='selection multiple' selected=selected }}
-      <div class="defaul text">Pick a color....</div>
+      <div class="default text">Pick a color....</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div data-value="red" class="item">Red</div>
+        <div data-value="green" class="item">
+          <span data-value="blue" class="description">ctrl + g</span>
+          Green
+        </div>
+        <div class="item">
+          Blue
+        </div>
+      </div>
+    {{/ui-dropdown}}
+  </div>
+  <div class="ui segment blue">
+    Selected: {{selected}}
+  </div>
+</div>
+
+
+<div class="ui segment">
+  <div class="ui header">
+    Passing multiple select with fullTextSearch
+  </div>
+  <p>
+    Note that when using multiple select, you will be returned a comma separated
+    string of values.  How you wish to consume this is left to the user.
+  </p>
+  <pre class="ui segment green">
+    \{{#ui-dropdown class='selection search multiple' selected=selected }}
+      &lt;div class="default text"&gt;Pick a color....&lt;/div&gt;
+      &lt;i class="dropdown icon"&gt;&lt;/i&gt;
+      &lt;div class="menu"&gt;
+        &lt;div data-value="red" class="item"&gt;Red&lt;/div&gt;
+        &lt;div data-value="green" class="item"&gt;
+          &lt;span data-value="blue" class="description"&gt;ctrl + g&lt;/span&gt;
+          Green
+        &lt;/div&gt;
+        &lt;div class="item"&gt;
+          Blue
+        &lt;/div&gt;
+      &lt;/div&gt;
+    \{{/ui-dropdown}}
+  </pre>
+  <div class="ui segment grey">
+    <h4>Selected: {{selected}}</h4>
+    {{#ui-dropdown class='selection search multiple' fullTextSearch=true selected=selected }}
+      <div class="default text">Pick a color....</div>
       <i class="dropdown icon"></i>
       <div class="menu">
         <div data-value="red" class="item">Red</div>
