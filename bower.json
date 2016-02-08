@@ -8,7 +8,7 @@
     "jquery": "1.11.3"
   },
   "devDependencies": {
-    "semantic-ui": "~2.1.4"
+    "semantic-ui": "~2.1.8"
   },
   "resolutions": {
     "ember": "2.3.0"
