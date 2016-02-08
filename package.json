@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-semantic-ui",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -44,7 +44,7 @@
   "dependencies": {
     "ember-cli-htmlbars": "^1.0.1",
     "ember-cli-babel": "~5.1.5"
-   },
+  },
   "ember-addon": {
     "configPath": "tests/dummy/config"
   }
